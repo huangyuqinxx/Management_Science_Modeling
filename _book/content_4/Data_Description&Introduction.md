@@ -1,6 +1,6 @@
 # 数据描述与介绍
 
-&emsp; 本文选用的数据集是Kaggke网站提供的澳大利亚2008年到2017年的真实气候数据（网址：https://www.kaggle.com/datasets/jsphyg/weather-dataset-rattle-package  ）其中包括澳大利亚49个地区十年来与降雨相关的数据信息。
+&emsp; 本文选用的数据集是Kaggke网站提供的澳大利亚2008年到2017年的真实气候数据（网址：https://www.kaggle.com/datasets/jsphyg/weather-dataset-rattle-package），其中包括澳大利亚49个地区十年来与降雨相关的数据信息。
 
 &emsp; 该数据集包括23个变量，基本数据信息如表1。
 
