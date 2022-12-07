@@ -1,0 +1,581 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数据缺失处理 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Exception_Value_Processing.html" />
+    
+    
+    <link rel="prev" href="../Data_Preprocessing.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    摘要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../content_1/Introduction.html">
+            
+                <a href="../../content_1/Introduction.html">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../content_2/Background&Significance.html">
+            
+                <a href="../../content_2/Background&Significance.html">
+            
+                    
+                    研究背景及意义
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../content_2/Background.html">
+            
+                <a href="../../content_2/Background.html">
+            
+                    
+                    研究背景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../content_2/Significance.html">
+            
+                <a href="../../content_2/Significance.html">
+            
+                    
+                    研究意义
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../content_3/Literature_Review.html">
+            
+                <a href="../../content_3/Literature_Review.html">
+            
+                    
+                    文献综述
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../content_3/Review_of_Rainfall_Prediction.html">
+            
+                <a href="../../content_3/Review_of_Rainfall_Prediction.html">
+            
+                    
+                    降雨预测研究现状
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../content_3/Review_of_Rainfall_Prediction_Models.html">
+            
+                <a href="../../content_3/Review_of_Rainfall_Prediction_Models.html">
+            
+                    
+                    降雨预测模型研究现状
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../content_3/Review_of_Machine_Learning_Models&Interpretability.html">
+            
+                <a href="../../content_3/Review_of_Machine_Learning_Models&Interpretability.html">
+            
+                    
+                    机器学习模型可解释性研究现状
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Data_Cleaning.html">
+            
+                <a href="../Data_Cleaning.html">
+            
+                    
+                    数据清洗
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Data_Description&Introduction.html">
+            
+                <a href="../Data_Description&Introduction.html">
+            
+                    
+                    数据描述与介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Data_Preprocessing.html">
+            
+                <a href="../Data_Preprocessing.html">
+            
+                    
+                    数据预处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.5.2.1" data-path="Missing_Value_Processing.html">
+            
+                <a href="Missing_Value_Processing.html">
+            
+                    
+                    数据缺失处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="Exception_Value_Processing.html">
+            
+                <a href="Exception_Value_Processing.html">
+            
+                    
+                    异常值处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../content_5/Retest_System.html">
+            
+                <a href="../../content_5/Retest_System.html">
+            
+                    
+                    第五章
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../reference/Reference.html">
+            
+                <a href="../../reference/Reference.html">
+            
+                    
+                    参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >数据缺失处理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6570;&#x636E;&#x7F3A;&#x5931;&#x5904;&#x7406;">&#x6570;&#x636E;&#x7F3A;&#x5931;&#x5904;&#x7406;</h1>
+<p>&#x2003;&#x5BF9;&#x6570;&#x636E;&#x96C6;&#x6570;&#x636E;&#x7F3A;&#x5931;&#x60C5;&#x51B5;&#x8FDB;&#x884C;&#x53EF;&#x89C6;&#x5316;&#x5904;&#x7406;&#xFF0C;&#x7531;&#x53D8;&#x91CF;&#x6570;&#x636E;&#x7684;&#x7F3A;&#x5931;&#x60C5;&#x51B5;&#x56FE;&#xFF08;&#x56FE;1&#xFF09;&#x53EF;&#x4EE5;&#x5927;&#x81F4;&#x770B;&#x51FA;Evaporation&#x3001;Sunshine&#x3001;Cloud9am&#x548C;Cloud3pm&#x56DB;&#x4E2A;&#x53D8;&#x91CF;&#x6570;&#x636E;&#x7684;&#x7F3A;&#x5931;&#x7387;&#x5F88;&#x9AD8;&#x3002;</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="D:\Studyfiles\&#x7BA1;&#x7406;&#x79D1;&#x5B66;&#x5EFA;&#x6A21;&#x65B9;&#x6CD5;&#x8BBA;\&#x5C0F;&#x7EC4;\Introduction\content_4\&#x56FE;1.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">&#x56FE;1 &#x6570;&#x636E;&#x7F3A;&#x5931;&#x7387;&#x56FE;</div>
+</center>
+
+<p>&#x2003;&#x901A;&#x8FC7;&#x63CF;&#x8FF0;&#x6027;&#x7EDF;&#x8BA1;&#x8FDB;&#x4E00;&#x6B65;&#x5F97;&#x51FA;&#x7CBE;&#x786E;&#x7684;&#x6570;&#x636E;&#x7F3A;&#x5931;&#x60C5;&#x51B5;&#xFF0C;&#x5982;&#x8868;2&#x3002;&#x5BF9;&#x4E8E;Evaporation&#x3001;Sunshine&#x3001;Cloud9am&#x548C;Cloud3pm&#x56DB;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x5176;&#x6570;&#x636E;&#x7684;&#x7F3A;&#x5931;&#x7387;&#x5DF2;&#x7ECF;&#x8D85;&#x8FC7;&#x4E86;30%&#xFF0C;&#x76F4;&#x63A5;&#x8FD0;&#x7528;&#x63D2;&#x8865;&#x6CD5;&#x8FDB;&#x884C;&#x63D2;&#x8865;&#x540E;&#x7684;&#x6570;&#x636E;&#x53EF;&#x80FD;&#x4F1A;&#x4F7F;&#x6A21;&#x578B;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;&#x4EA7;&#x751F;&#x8F83;&#x5927;&#x504F;&#x5DEE;&#xFF0C;&#x52A0;&#x4E0A;&#x6837;&#x672C;&#x6570;&#x636E;&#x91CF;&#x6BD4;&#x8F83;&#x591A;&#xFF0C;&#x8003;&#x8651;&#x5220;&#x9664;&#x8FD9;&#x56DB;&#x4E2A;&#x53D8;&#x91CF;&#x5BF9;&#x5E94;&#x7684;&#x7F3A;&#x5931;&#x6837;&#x672C;&#x3002;&#x5BF9;&#x4E8E;&#x53D8;&#x91CF;RainToday&#x548C;RainTomorrow&#xFF0C;&#x5176;&#x5206;&#x522B;&#x4EE3;&#x8868;&#x4ECA;&#x5929;&#x662F;&#x5426;&#x4E0B;&#x96E8;&#x548C;&#x660E;&#x5929;&#x662F;&#x5426;&#x4E0B;&#x96E8;&#xFF0C;&#x8003;&#x8651;&#x5C06;&#x6570;&#x636E;&#x4E2D;&#x201C;yes&#x201D;&#x3001;&#x201C;no&#x201D;&#x8F6C;&#x53D8;&#x4E3A;&#x5E03;&#x5C14;&#x503C;1&#x3001;0&#xFF0C;&#x65B9;&#x4FBF;&#x4E4B;&#x540E;&#x7684;&#x6A21;&#x578B;&#x8BA1;&#x7B97;&#x5904;&#x7406;&#x3002;&#x5BF9;&#x4E8E;&#x5176;&#x4ED6;&#x7684;&#x5B57;&#x7B26;&#x578B;&#x53D8;&#x91CF;&#xFF0C;&#x5C06;&#x5176;&#x8F6C;&#x53D8;&#x4E3A;&#x4E0D;&#x5177;&#x6709;&#x6392;&#x5E8F;&#x7684;&#x6570;&#x5B57;&#x8868;&#x793A;&#x3002;&#x5BF9;&#x4E8E;&#x5176;&#x4ED6;&#x6570;&#x503C;&#x578B;&#x53D8;&#x91CF;&#xFF0C;&#x5206;&#x5E03;&#x4F7F;&#x7528;&#x5747;&#x503C;&#x63D2;&#x8865;&#x3001;&#x4E2D;&#x4F4D;&#x6570;&#x63D2;&#x8865;&#x3001;&#x591A;&#x91CD;&#x63D2;&#x8865;&#x6CD5;&#x4EE5;&#x53CA;&#x968F;&#x673A;&#x68EE;&#x6797;&#x63D2;&#x8865;&#x6CD5;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x63D2;&#x8865;&#x3002;&#x968F;&#x673A;&#x68EE;&#x6797;&#x63D2;&#x8865;&#x662F;&#x4E00;&#x79CD;&#x673A;&#x5668;&#x5B66;&#x4E60;&#x6280;&#x672F;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x9002;&#x5E94;&#x975E;&#x7EBF;&#x6027;&#x548C;&#x76F8;&#x4E92;&#x4F5C;&#x7528;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x7279;&#x5B9A;&#x7684;&#x56DE;&#x5F52;&#x6A21;&#x578B;&#xFF0C;&#x5E76;&#x4E14;&#x968F;&#x673A;&#x68EE;&#x6797;&#x63D2;&#x8865;&#x65B9;&#x6CD5;&#x76F8;&#x5BF9;&#x4E8E;&#x5176;&#x4ED6;&#x7684;&#x53C2;&#x6570;MICE&#x65B9;&#x6CD5;&#x66F4;&#x6709;&#x6548;&#xFF0C;&#x80FD;&#x4EA7;&#x751F;&#x66F4;&#x7A84;&#x7684;&#x7F6E;&#x4FE1;&#x533A;&#x95F4;&#xFF08;Shah A D&#x7B49;&#xFF0C;2014&#xFF09;<sup>[32]</sup>&#x3002;&#x6240;&#x4EE5;&#x672C;&#x7814;&#x7A76;&#x6700;&#x7EC8;&#x9009;&#x62E9;&#x968F;&#x673A;&#x68EE;&#x6797;&#x65B9;&#x6CD5;&#x63D2;&#x8865;&#x6570;&#x636E;&#x96C6;&#xFF0C;&#x63D2;&#x8865;&#x540E;&#x6570;&#x636E;&#x96C6;&#x7684;&#x63CF;&#x8FF0;&#x6027;&#x7EDF;&#x8BA1;&#x4EE5;&#x53CA;&#x76F4;&#x65B9;&#x56FE;&#x89C1;&#x9644;&#x4EF6;1&#x3001;2&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>&#x5217;&#x540D;</strong></th>
+<th style="text-align:center"><strong>&#x7F3A;&#x5931;&#x503C;&#x6570;&#x91CF;</strong></th>
+<th style="text-align:center"><strong>&#x7F3A;&#x5931;&#x503C;&#x5360;&#x6BD4;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>MinTemp</strong></td>
+<td style="text-align:center">1485</td>
+<td style="text-align:center">1.02%</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>MaxTemp</strong></td>
+<td style="text-align:center">1261</td>
+<td style="text-align:center">0.86%</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Rainfall</strong></td>
+<td style="text-align:center">3261</td>
+<td style="text-align:center">2.24%</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Evaporation</strong></td>
+<td style="text-align:center">62790</td>
+<td style="text-align:center">43.17%</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Sunshine</strong></td>
+<td style="text-align:center">69835</td>
+<td style="text-align:center">48.01%</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>WindGustDir</strong></td>
+<td style="text-align:center">10326</td>
+<td style="text-align:center">7.10%</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>WindDir9am</strong></td>
+<td style="text-align:center">10566</td>
+<td style="text-align:center">7.26%</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>WindDir3pm</strong></td>
+<td style="text-align:center">4228</td>
+<td style="text-align:center">2.90%</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>WindGustSpeed</strong></td>
+<td style="text-align:center">10263</td>
+<td style="text-align:center">7.06%</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>WindSpeed9am</strong></td>
+<td style="text-align:center">1767</td>
+<td style="text-align:center">1.21%</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>WindSpeed3pm</strong></td>
+<td style="text-align:center">3062</td>
+<td style="text-align:center">2.11%</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Humidity9am</strong></td>
+<td style="text-align:center">2654</td>
+<td style="text-align:center">1.82%</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Humidity3pm</strong></td>
+<td style="text-align:center">4507</td>
+<td style="text-align:center">3.10%</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Pressure9am</strong></td>
+<td style="text-align:center">15065</td>
+<td style="text-align:center">10.36%</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Pressure3pm</strong></td>
+<td style="text-align:center">15028</td>
+<td style="text-align:center">10.33%</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Cloud9am</strong></td>
+<td style="text-align:center">55888</td>
+<td style="text-align:center">38.42%</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Cloud3pm</strong></td>
+<td style="text-align:center">59358</td>
+<td style="text-align:center">40.81%</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Temp9am</strong></td>
+<td style="text-align:center">1767</td>
+<td style="text-align:center">1.21%</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Temp3pm</strong></td>
+<td style="text-align:center">3609</td>
+<td style="text-align:center">2.48%</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>RainToday</strong></td>
+<td style="text-align:center">3261</td>
+<td style="text-align:center">2.24%</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>RainTomorrow</strong></td>
+<td style="text-align:center">3267</td>
+<td style="text-align:center">2.25%</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Data_Preprocessing.html" class="navigation navigation-prev " aria-label="Previous page: 数据预处理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Exception_Value_Processing.html" class="navigation navigation-next " aria-label="Next page: 异常值处理">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数据缺失处理","level":"1.5.2.1","depth":3,"next":{"title":"异常值处理","level":"1.5.2.2","depth":3,"path":"content_4/Data_Preprocessing/Exception_Value_Processing.md","ref":"content_4/Data_Preprocessing/Exception_Value_Processing.md","articles":[]},"previous":{"title":"数据预处理","level":"1.5.2","depth":2,"path":"content_4/Data_Preprocessing.md","ref":"content_4/Data_Preprocessing.md","articles":[{"title":"数据缺失处理","level":"1.5.2.1","depth":3,"path":"content_4/Data_Preprocessing/Missing_Value_Processing.md","ref":"content_4/Data_Preprocessing/Missing_Value_Processing.md","articles":[]},{"title":"异常值处理","level":"1.5.2.2","depth":3,"path":"content_4/Data_Preprocessing/Exception_Value_Processing.md","ref":"content_4/Data_Preprocessing/Exception_Value_Processing.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"content_4/Data_Preprocessing/Missing_Value_Processing.md","mtime":"2022-12-07T10:32:05.835Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-07T11:18:23.288Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
